@@ -20,10 +20,10 @@
 $(document).ready(function(){
 
   // HIDE BUTONS ON START
-  $('#congrats').hide()
+  $('#congrats-container').hide()
 
   $('#hooray').on('click', function() {
-    $('#congrats').show()
+    $('#congrats-container').show()
     $('#hooray').hide()
     $('#maddie').hide()
   })

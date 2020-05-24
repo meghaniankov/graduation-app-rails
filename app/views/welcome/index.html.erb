@@ -6,28 +6,31 @@
       <%= image_tag(asset_path('university.png'), :class => 'img-responsive animated bounce delay-2s', :id => 'hooray', :align => "center", :title => 'Click Me!', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom') %>
     <% end %>
 
-    <div id='congrats'>
-      <div id='q1'>
-        <h1 class="display-4">Are you Madeline McCue?</h1>
-        <hr class="my-4">
-        <br>
+    <div id='congrats-container'>
+      <div class='congrats animated fadeIn'>
+        <div id='q1'>
+          <h1 class="display-4">Are you Madeline McCue?</h1>
+          <hr class="my-4">
+          <br>
 
-        <div class="btn-group-vertical">
-          <button class='btn btn-primary' id='yes-maddie' href='#'>YES</button>
-          <%= link_to "NO", new_message_path, :class => "btn btn-primary" %>
+          <div class="btn-group-vertical">
+            <button class='btn btn-primary' id='yes-maddie' href='#'>YES</button>
+            <%= link_to "NO", new_message_path, :class => "btn btn-primary" %>
+          </div>
+        </div>
+
+        <div id='maddie'>
+          <h1 class="display-4 animated bounce delay-10s">CONGRATS!!</h1>
+          <p class="lead">You did it!</p>
+          <hr class="my-4">
+
+          <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Coming Soon!">
+            View Messages
+          </button>
+          <br><br>
+          <%= link_to '< back', root_path %>
         </div>
       </div>
-
-      <div id='maddie'>
-        <h1 class="display-4 animated tada">CONGRATS!!</h1>
-        <p class="lead">You did it!</p>
-        <hr class="my-4">
-
-        <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Coming Soon!">
-          View Messages
-        </button>
-      </div>
-
     </div>
   
 
