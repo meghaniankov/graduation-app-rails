@@ -16,3 +16,16 @@
 
 //= require jquery
 //= require bootstrap-sprockets
+
+$(document).ready(function(){
+
+  // HIDE BUTONS ON START
+  $('#congrats').hide()
+
+  $('#hooray').on('click', function() {
+    $('#congrats').show()
+    $('#hooray').hide()
+  })
+
+})
+

@@ -1,14 +1,17 @@
 <div class='container'>
-  <h1>Congrats Maddie!</h1>
+  <%= link_to '#' do %>
+    <%= image_tag(asset_path('university.png'), :class => 'img-responsive animated bounce delay-2s', :id => 'hooray') %>
+  <% end %>
 
-  <%= image_tag asset_path('university.png'), class: 'img-responsive' %>
-  
-  <button id='test-btn'>TEST</button>
-  <div id='test'>TEST</div>
-  
-  <div class="btn-group-vertical">
-    <%= link_to "View Messages", messages_path, :method => :get, :class => "btn btn-primary" %>
-    <%= link_to "New Message", new_message_path, :class => "btn btn-primary" %>
+  <div id='congrats'>
+    <h1>Congrats Maddie!</h1>
+
+    <div class="btn-group-vertical">
+      <%= link_to "View Messages", messages_path, :method => :get, :class => "btn btn-primary" %>
+      <%= link_to "New Message", new_message_path, :class => "btn btn-primary" %>
+    </div>
   </div>
+  
+
 
 </div>
