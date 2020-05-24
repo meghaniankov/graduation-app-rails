@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :messages
+  resources :thank_you
+
 
   root 'welcome#index'
 end

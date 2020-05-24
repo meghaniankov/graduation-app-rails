@@ -14,7 +14,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
  
     @message.save
-    redirect_to @message
+    redirect_to thank_you_index_path
   end
 
   private

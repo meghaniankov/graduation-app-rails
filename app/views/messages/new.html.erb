@@ -1,22 +1,24 @@
 
 <div class='container'>
-  <h1>New Message</h1>
+  <div class='new-message-container animated fadeIn'>
+    <h1>New Message</h1>
 
-  <%= form_with scope: :message, url: messages_path, :html => {:class => "form-horizontal center"}, local: true do |form| %>
-    <p>
-      <%= form.label :author, class: "col-md-4 control-label" %><br>
-      <%= form.text_field :author, class: "form-control" %>
-    </p>
-  
-    <p>
-      <%= form.label :text, class: "col-md-4 control-label" %><br>
-      <%= form.text_area :text, class: "form-control" %>
-    </p>
-  
-    <p>
-      <%= form.submit :Submit, class: 'btn btn-primary' %>
-    </p>
-  <% end %>
+    <%= form_with scope: :message, url: messages_path, :html => {:class => "form-horizontal center"}, local: true do |form| %>
+      <p>Leave a special message for Madeline to read on her graduation day.</p>
+      <p>
+        <%= form.text_area :text, class: "form-control" %>
+      </p>
 
-  <%= link_to '< back', messages_path %>
+      <p>
+        <%= form.label :from, class: "col-md-4 control-label" %><br>
+        <%= form.text_field :author, class: "form-control" %>
+      </p>
+    
+      <p>
+        <%= form.submit :Submit, class: 'btn btn-primary' %>
+      </p>
+    <% end %>
+
+    <%= link_to '< back', messages_path %>
+  </div>
 </div>
