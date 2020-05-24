@@ -1,17 +1,19 @@
-<h1>All Messages</h1>
- 
-<table>
-  <tr>
-    <th>From</th>
-    <th>Message</th>
-    <th></th>
-  </tr>
- 
-  <% @messages.each do |message| %>
+<div class='container'>
+  <h1>All Messages</h1>
+  
+  <table>
     <tr>
-      <td><%= message.author %></td>
-      <td><%= message.text %></td>
-      <td><%= link_to 'Show', message_path(message) %></td>
+      <th>From</th>
+      <th>Message</th>
+      <th></th>
     </tr>
-  <% end %>
-</table>
+  
+    <% @messages.each do |message| %>
+      <tr>
+        <td><%= message.author %></td>
+        <td><%= message.text %></td>
+        <td><%= link_to 'Show', message_path(message) %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
