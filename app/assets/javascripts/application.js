@@ -26,6 +26,7 @@ $(document).ready(function(){
     $('#congrats-container').show()
     $('#hooray').hide()
     $('#maddie').hide()
+    $('[data-toggle="tooltip"]').tooltip('hide')
   })
 
   $('#yes-maddie').on('click', function() {
@@ -33,7 +34,14 @@ $(document).ready(function(){
     $('#q1').hide()
   })
 
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="tooltip"]').tooltip({
+    trigger: 'manual'
+  })
+
+  $('[data-toggle="tooltip"]').tooltip('hide');
+    setTimeout(function(){ 
+      $('[data-toggle="tooltip"]').tooltip('show'); 
+    }, 2000);
 
 
 
