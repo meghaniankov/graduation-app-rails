@@ -25,6 +25,16 @@ $(document).ready(function(){
   $('#hooray').on('click', function() {
     $('#congrats').show()
     $('#hooray').hide()
+    $('#maddie').hide()
   })
+
+  $('#yes-maddie').on('click', function() {
+    $('#maddie').show()
+    $('#q1').hide()
+  })
+
+  $('[data-toggle="tooltip"]').tooltip()
+
+
 
 })

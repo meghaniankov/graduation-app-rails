@@ -1,16 +1,34 @@
-<div class='container'>
-  <%= link_to '#' do %>
-    <%= image_tag(asset_path('university.png'), :class => 'img-responsive animated bounce delay-2s', :id => 'hooray') %>
-  <% end %>
+<div class='container text-center'>
+    <br>
+    <br>
 
-  <div id='congrats'>
-    <h1>Congrats Maddie!</h1>
+    <%= link_to '#' do %>
+      <%= image_tag(asset_path('university.png'), :class => 'img-responsive animated bounce delay-2s', :id => 'hooray', :align => "center", :title => 'Click Me!', 'data-toggle' => 'tooltip', 'data-placement' => 'bottom') %>
+    <% end %>
 
-    <div class="btn-group-vertical">
-      <%= link_to "View Messages", messages_path, :method => :get, :class => "btn btn-primary" %>
-      <%= link_to "New Message", new_message_path, :class => "btn btn-primary" %>
+    <div id='congrats'>
+      <div id='q1'>
+        <h1 class="display-4">Are you Madeline McCue?</h1>
+        <hr class="my-4">
+        <br>
+
+        <div class="btn-group-vertical">
+          <button class='btn btn-primary' id='yes-maddie' href='#'>YES</button>
+          <%= link_to "NO", new_message_path, :class => "btn btn-primary" %>
+        </div>
+      </div>
+
+      <div id='maddie'>
+        <h1 class="display-4 animated tada">CONGRATS!!</h1>
+        <p class="lead">You did it!</p>
+        <hr class="my-4">
+
+        <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Coming Soon!">
+          View Messages
+        </button>
+      </div>
+
     </div>
-  </div>
   
 
 </div>
