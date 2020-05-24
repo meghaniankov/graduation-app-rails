@@ -26,7 +26,7 @@ $(document).ready(function(){
     $('#congrats-container').show()
     $('#hooray').hide()
     $('#maddie').hide()
-    $('[data-toggle="tooltip"]').tooltip('hide')
+    $('#hooray').tooltip('hide')
   })
 
   $('#yes-maddie').on('click', function() {
@@ -34,13 +34,15 @@ $(document).ready(function(){
     $('#q1').hide()
   })
 
-  $('[data-toggle="tooltip"]').tooltip({
+  $('#hooray').tooltip({
     trigger: 'manual'
   })
 
-  $('[data-toggle="tooltip"]').tooltip('hide');
+  $('#view-messages-btn').tooltip()
+
+  $('#hooray').tooltip('hide');
     setTimeout(function(){ 
-      $('[data-toggle="tooltip"]').tooltip('show'); 
+      $('#hooray').tooltip('show'); 
     }, 2000);
 
 
