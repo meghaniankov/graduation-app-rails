@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+ 
+
+ body {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: rgb(235,172,72);
+  /* background: -moz-linear-gradient(0deg, rgba(235,172,72,0.5662640056022409) 0%, rgba(2,58,133,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(235,172,72,0.5662640056022409) 0%, rgba(2,58,133,1) 100%);
+  background: linear-gradient(0deg, rgba(235,172,72,0.5662640056022409) 0%, rgba(2,58,133,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ebac48",endColorstr="#023a85",GradientType=1); */
+ }
+
+ a {
+  background-color: rgba(2,58,133,1); 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+}
