@@ -1,19 +1,21 @@
 <div class='container'>
   <h1>All Messages</h1>
-  
-  <table>
-    <tr>
-      <th>From</th>
-      <th>Message</th>
-      <th></th>
-    </tr>
-  
+  <div class="row">
     <% @messages.each do |message| %>
-      <tr>
-        <td><%= message.author %></td>
-        <td><%= message.text %></td>
-        <td><%= link_to 'Show', message_path(message) %></td>
-      </tr>
+      <div class="col-xs-6">
+        <div class='card'>
+          <div class='card-icon'>
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+          </div>
+          <div class="card-body">
+            <div class='auth-link'>
+              <%= link_to message.author, message_path(message) %>
+            </div>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </table>
+  </div>
 </div>
+
+
