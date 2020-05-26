@@ -50,6 +50,7 @@ $(document).ready(function(){
     $('.card-author').hide()
     $('.card-text').hide()
     $('#t-' + this.id).show()
+    console.log( $('#' + this.id).height() )
   })
 
   $('.card-text').on('click', function() {
