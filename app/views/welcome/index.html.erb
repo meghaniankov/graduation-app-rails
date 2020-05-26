@@ -27,9 +27,7 @@
           <%= image_tag asset_path("OHS.png") %>
           <br>
 
-          <button type="button" id='view-messages-btn' class="btn btn-primary btn-lg" data-toggle="tooltip" data-placement="bottom" title="Coming Soon!">
-            View Messages
-          </button>
+          <%= link_to 'View Messages', messages_path, :method => :get, :class => 'btn btn-primary btn-lg', :id => 'view-messages-btn' %>
 
           <br><br>
           <%= link_to '< back', root_path %>
