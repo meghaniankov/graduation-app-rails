@@ -21,6 +21,7 @@ $(document).ready(function(){
 
   // HIDE BUTONS ON START
   $('#congrats-container').hide()
+  $('.card-text').hide()
 
   $('#hooray').on('click', function() {
     $('#congrats-container').show()
@@ -44,6 +45,18 @@ $(document).ready(function(){
     setTimeout(function(){ 
       $('#hooray').tooltip('show'); 
     }, 2000);
+
+  $('.card-author').on('click', function() {
+    console.log(this.id)
+    $('.card-author').hide()
+    $('.card-text').hide()
+    $(`#t-${this.id}`).show()
+  })
+
+  $('.card-text').on('click', function() {
+    $('.card-author').show()
+    $('.card-text').hide()
+  })
 
 
 
