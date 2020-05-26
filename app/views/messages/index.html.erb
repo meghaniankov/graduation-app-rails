@@ -5,11 +5,14 @@
       <div class="col-xs-6">
         <div class='card'>
           <div class='card-icon'>
-            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+            
           </div>
           <div class="card-body">
             <div class='auth-link'>
-              <%= link_to message.author, message_path(message) %>
+              <%= link_to(message_path(message)) do %>
+                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><br>
+                <%= message.author %>
+              <% end %>
             </div>
           </div>
         </div>
