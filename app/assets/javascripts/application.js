@@ -50,7 +50,8 @@ $(document).ready(function(){
     $('.card-author').hide()
     $('.card-text').hide()
     $('#t-' + this.id).show()
-    console.log( $('#' + this.id).height() )
+    console.log(this.id)
+    console.log(this)
   })
 
   $('.card-text').on('click', function() {
