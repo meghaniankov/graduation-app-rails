@@ -47,10 +47,9 @@ $(document).ready(function(){
     }, 2000);
 
   $('.card-author').on('click', function() {
-    console.log(this.id)
     $('.card-author').hide()
     $('.card-text').hide()
-    $(`#t-${this.id}`).show()
+    $('#t-' + this.id).show()
   })
 
   $('.card-text').on('click', function() {
