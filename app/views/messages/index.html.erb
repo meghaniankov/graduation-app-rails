@@ -1,19 +1,35 @@
 <div class='container'>
-  <h1>All Messages</h1>
-  
-  <table>
-    <tr>
-      <th>From</th>
-      <th>Message</th>
-      <th></th>
-    </tr>
-  
-    <% @messages.each do |message| %>
-      <tr>
-        <td><%= message.author %></td>
-        <td><%= message.text %></td>
-        <td><%= link_to 'Show', message_path(message) %></td>
-      </tr>
-    <% end %>
-  </table>
+  <div class='view-messages-container animated fadeIn'>
+    <h1 class="display-4">Your Messages</h1>
+    <p class="lead">Messages from your loved ones on graduation day:</p>
+    <hr class="my-4">
+
+    <div class="row">
+      <% @messages.each do |message| %>
+        <div class="col-xs-6">
+          <div class='card-author' id=<%= message.id %>>
+            <div class='card' >
+              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><br>
+              <%= message.author %>
+            </div>
+          </div>
+        </div>
+
+        <div class='card-text' id='t-<%= message.id %>'>
+          <div class='card' >
+            <div class='card-text-message'>
+              <%= message.text %>
+            </div>
+            <div class='card-text-author'>
+              <p>Love,</p>
+              <%= message.author %>
+            </div>
+          </div>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
 </div>
+
+
